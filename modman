@@ -1,0 +1,14 @@
+admin/controller/payment/dibseasy.php admin/controller/payment/dibseasy.php
+admin/language/english/payment/dibseasy.php admin/language/english/payment/dibseasy.php
+admin/view/template/payment/dibseasy.tpl admin/view/template/payment/dibseasy.tpl
+catalog/controller/payment/dibseasy.php catalog/controller/payment/dibseasy.php
+catalog/language/swedish/mail/order.php catalog/language/swedish/mail/order.php
+catalog/model/payment/dibseasy.php catalog/model/payment/dibseasy.php
+catalog/controller/checkout/dibseasy.php catalog/controller/checkout/dibseasy.php
+catalog/controller/checkout/dibseasy_success.php catalog/controller/checkout/dibseasy_success.php
+catalog/view/theme/default/template/mail/dibseasy_order.tpl catalog/view/theme/default/template/mail/dibseasy_order.tpl
+admin/view/image/payment/dibs.png admin/view/image/payment/dibs.png
+system/dibseasy.ocmod.xml system/dibseasy.ocmod.xml
+catalog/view/theme/default/template/checkout/dibseasy.tpl catalog/view/theme/default/template/checkout/dibseasy.tpl
+catalog/model/checkout/dibseasy_order.php catalog/model/checkout/dibseasy_order.php
+catalog/view/theme/default/template/common/dibseasy_success.tpl catalog/view/theme/default/template/common/dibseasy_success.tpl

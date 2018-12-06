@@ -1,0 +1,35 @@
+<?php
+// Text
+$_['text_new_subject']          = '%s - Order %s';
+$_['text_new_greeting']         = 'Vänligen svara på det här e-postmeddelandet om du har några frågor.';
+$_['text_new_received']         = 'You have received an order.';
+$_['text_new_link']             = 'To view your order click on the link below:';
+$_['text_new_order_detail']     = 'Orderdetaljer';
+$_['text_new_instruction']      = 'Instructions';
+$_['text_new_order_id']         = 'Order ID:';
+$_['text_new_date_added']       = 'Datum Tillagt';
+$_['text_new_order_status']     = 'Order Status:';
+$_['text_new_payment_method']   = 'Payment Method:';
+$_['text_new_shipping_method']  = 'Frakt metod';
+$_['text_new_email']  		= 'E-post';
+$_['text_new_telephone']  	= 'Telefon:';
+$_['text_new_ip']  		= 'IP Address:';
+$_['text_new_payment_address']  = 'Betalningsadress';
+$_['text_new_shipping_address'] = 'Leveransadress';
+$_['text_new_products']         = 'Products';
+$_['text_new_product']          = 'Produkt';
+$_['text_new_model']            = 'Modell';
+$_['text_new_quantity']         = 'Kvantitet';
+$_['text_new_price']            = 'Price';
+$_['text_new_order_total']      = 'Order Totals';
+$_['text_new_total']            = 'Total';
+$_['text_new_download']         = 'Once your payment has been confirmed you can click on the link below to access your downloadable products:';
+$_['text_new_comment']          = 'The comments for your order are:';
+$_['text_new_footer']           = 'Vänligen svara på det här e-postmeddelandet om du har några frågor.';
+$_['text_update_subject']       = '%s - Order Update %s';
+$_['text_update_order']         = 'Order ID:';
+$_['text_update_date_added']    = 'Date Ordered:';
+$_['text_update_order_status']  = 'Your order has been updated to the following status:';
+$_['text_update_comment']       = 'The comments for your order are:';
+$_['text_update_link']          = 'To view your order click on the link below:';
+$_['text_update_footer']        = 'Please reply to this email if you have any questions.';
