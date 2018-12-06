@@ -555,6 +555,7 @@ class ModelPaymentDibseasy extends Model {
             $header = array();
             $headers[] = "Content-Type: text/json"; 
             $headers[] = "Accept: test/json"; 
+	    $headers[] = 'commercePlatformTag: OC20';
             if($this->config->get('dibseasy_testmode') == 1) {
                $headers[] = 'Authorization: ' . str_replace('-', '', trim($this->config->get('dibseasy_testkey')));
             } else {
