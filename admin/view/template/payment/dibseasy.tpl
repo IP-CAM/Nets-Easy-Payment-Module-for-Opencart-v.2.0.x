@@ -52,6 +52,7 @@
          <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-dibseasy-checkoutkeylive"><?php echo $entry_dibseasy_checkoutkey_live; ?></label>
           <div class="col-sm-10">
+              <a href="../../../../../../../Users/mshai/Documents/backup/opencart2.3/admin/view/template/extension/payment/dibseasy.tpl"></a>
               <input type="text" name="dibseasy_checkoutkey_live" value="<?php echo $dibseasy_checkoutkey_live; ?>" placeholder="" id="input-dibseasy-checkoutkey-live" class="form-control" />
                <?php if ($checkout_key_live) { ?>
                 <div class="text-danger"><?php echo $checkout_key_live; ?></div>
@@ -87,6 +88,17 @@
               <input type="text" name="dibseasy_terms_and_conditions" value="<?php echo $dibseasy_terms_and_conditions; ?>" placeholder="https://" id="input-dibseasy-terms-and-conditions" class="form-control" />
           </div>
          </div>
+         
+         <div class="form-group required">
+            <label class="col-sm-2 control-label" for="dibseasy_merchant_terms_and_conditions"><?php echo $entry_dibseasy_merchant_terms_and_conditions;?></label>
+            <div class="col-sm-10">
+                <input type="text" name="dibseasy_merchant_terms_and_conditions" placeholder="http[s]://" value="<?php echo $dibseasy_merchant_terms_and_conditions; ?>" id="dibseasy_merchant_term_and_conditions" class="form-control" />
+                <?php if ($error_easy_merchant_term_and_conditions) { ?>
+                <div class="text-danger"><?php echo $error_easy_merchant_term_and_conditions; ?></div>
+	        <?php } ?>
+            </div>
+         </div>
+            
          <div class="form-group">
             <label class="col-sm-2 control-label" for="input-order-status"><?php echo $entry_order_status; ?></label>
             <div class="col-sm-10">
@@ -149,6 +161,7 @@
           <div class="form-group">
               <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_language; ?></label>
             <div class="col-sm-10">
+                <a href="../../../../../../../Users/mshai/Documents/backup/opencart2.3/admin/view/template/extension/payment/dibseasy.tpl"></a>
               <select name="dibseasy_language" id="input-language" class="form-control">
 		 <option value="en-GB" <?php echo $english_selected; ?> ><?php echo $text_english; ?></option>
 		 <option value="sv-SE" <?php echo $swedish_selected; ?> ><?php echo $text_swedish; ?></option>
@@ -170,6 +183,17 @@
                 <?php } ?>
               </select>
             </div>
+          </div>
+            <!-- Auto capture  -->
+          <div class="form-group">
+                <label class="col-sm-2 control-label" for="dibseasy_sort_order"> <?php echo $entry_autocapture; ?> </label>                 
+                <div class="col-sm-10"> 
+                      <?php if($dibseasy_autocapture){ ?>
+                      <input type="checkbox" name="dibseasy_autocapture" value="0" checked="checked" id="dibseasy_autocapture" class="form-control"/>
+                      <?php } else { ?>
+                      <input type="checkbox" name="dibseasy_autocapture" value="1" id="dibseasy_autocapture" class="form-control" />
+                      <?php } ?>
+                </div>
           </div>
         </form>
       </div>
