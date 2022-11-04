@@ -82,6 +82,7 @@ class ControllerCheckoutDibseasy extends Controller {
 		$data['header'] = $this->load->controller('common/header');
                 
     		$this->response->setOutput($this->load->view('default/template/checkout/dibseasy.tpl', array_merge($data, $checkoutData)));
+			
 	}
     
 }

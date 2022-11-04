@@ -21,7 +21,7 @@ class ModelPaymentDibseasy extends Model {
     }
 
     public function getMethod($address, $total) {
-        $this->load->language('extension/payment/dibseasy');
+        $this->load->language('payment/dibseasy');
         $status = true;
         $method_data = array();
         if ($status) {
@@ -32,6 +32,7 @@ class ModelPaymentDibseasy extends Model {
                 'sort_order' => $this->config->get('dibseasy_sort_order')
             );
         }
+		//print_r($method_data);die;    
         return $method_data;
     }
 
@@ -574,6 +575,7 @@ class ModelPaymentDibseasy extends Model {
         }
         $response = curl_exec($curl);
         $info = curl_getinfo($curl);
+        
         $this->logger->write($info);
         if ($info['http_code'] == 401 || $info['http_code'] == 404 || $info['http_code'] == 403) {
             $this->logger->write("Authorization failed, please check your secret key and mode test/live");
@@ -693,19 +695,22 @@ class ModelPaymentDibseasy extends Model {
                 'reference' => 'opc_' . $this->session->data['order_id']),
             'checkout' => array(
                 'charge' => ($this->config->get('payment_dibseasy_autocapture')) ? 'true' : 'false',
-                'url' => $this->url->link('payment/dibseasy/confirm', '', true),
+               // 'url' => $this->url->link('payment/dibseasy/confirm', '', true),
                 'termsUrl' => $this->config->get('dibseasy_terms_and_conditions'),
-                'merchantTermsUrl' => $this->config->get('payment_dibseasy_merchant_terms_and_conditions')
+                'merchantTermsUrl' => $this->config->get('dibseasy_merchant_terms_and_conditions')
             ),
             'merchantNumber' => trim($this->config->get('dibseasy_merchant')),
         );
         $data['checkout']['merchantHandlesConsumerData'] = true;
-        $data['checkout']['cancelUrl'] = $this->url->link('checkout/cart', '', true);
-
+        $data['checkout']['integrationType'] = 'HostedPaymentPage';
+        $data['checkout']['cancelUrl'] = $this->url->link('checkout/checkout', '', true);
+        $data['checkout']['returnUrl'] = $this->url->link('payment/dibseasy/confirmhosted', '', true);
+        
         if ($this->config->get('dibseasy_debug')) {
             $this->logger->write("Collected data:");
             $this->logger->write($data);
         }
+       // echo "<pre>";print_r($data);die;
         return json_encode($data);
     }
 
